@@ -1,6 +1,6 @@
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   build: {
@@ -8,8 +8,9 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'tailwindcss-misskey-theme',
       fileName: 'index',
-      formats:['es', 'cjs']
-    }
+      formats: ['es', 'cjs'],
+    },
+    outDir: 'dist',
   },
-  plugins: [dts()]
-})
+  plugins: [dts()],
+});
